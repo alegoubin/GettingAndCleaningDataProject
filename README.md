@@ -42,7 +42,7 @@ The script perform the following steps sequentially to achieve the expected resu
 6. Filter the feature table object that contains column names and keep only the columns with names containing the std() and mean() pattern using the grep function. 
 7. Replace column names of merged table with the contents of the feature table that we previously filtered out. Column 1 and 2 are the activity and subject
 8. Merge the file using the merge function with the activity labels by the activity code. This way we can display the activity label rather than the code.
-9. Use the data.table package and use the following function to get the means for all columns by activity and subject:
+9. Use the data.table package and use the following function to get the means for all columns by activity and subject:\n
 ```meanTable[,lapply(.SD,mean),by=list(activity_label,subject)]```
 10. Write result to output file
 
