@@ -43,11 +43,11 @@ The set of variables that were estimated (and kept for this assignment) from the
 
 Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 
-    gravityMean
-    time_body_accelerometerMean
-    time_body_accelerometerJerkMean
-    time_bodyGyroMean
-    time_bodyGyroJerkMean
+    gravity_mean
+    time_body_accelerometer_mean
+    time_body_accelerometer_jerk_mean
+    time_body_gyroscope_mean
+    time_body_gyroscope_jerk_mean
 
 Other estimates have been removed for the purpose of this excercise.
 
