@@ -15,12 +15,26 @@ The reasoning behind my selection of features is that the assignment explicitly 
 For this derived dataset, these signals were used to estimate variables of the feature vector for each pattern:
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-time_body_accelerometer-mean-X
-time_body_accelerometer-mean-Y
-time_body_accelerometer-mean-Z
-time_body_accelerometer-standard_deviation-X
-time_body_accelerometer-standard_deviation-Y
-time_body_accelerometer-standard_deviation-Z
+
+    tBodyAcc-XYZ
+    tGravityAcc-XYZ
+    tBodyAccJerk-XYZ
+    tBodyGyro-XYZ
+    tBodyGyroJerk-XYZ
+    tBodyAccMag
+    tGravityAccMag
+    tBodyAccJerkMag
+    tBodyGyroMag
+    tBodyGyroJerkMag
+    fBodyAcc-XYZ
+    fBodyAccJerk-XYZ
+    fBodyGyro-XYZ
+    fBodyAccMag
+    fBodyAccJerkMag
+    fBodyGyroMag
+    fBodyGyroJerkMag
+
+
 
 The set of variables that were estimated (and kept for this assignment) from these signals are:
 
