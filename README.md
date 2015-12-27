@@ -29,3 +29,20 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ## Dependencies
 
 ```run_analysis.R``` file will help you to install the dependencies automatically. It depends on ```data.table``` and ```dplyr```. 
+
+## Script Steps
+
+The script perform the following steps sequentially to achieve the expected result:
+
+1. Load dplyr and data.table libraries
+2. Loop through all files of the file package and load files into data frames (without Inertial files)
+3. Merge test files together using column bind (cbind) function
+4. Merge train files together using column bind (cbind) function
+5. Union both result files into one thanks to the row bind (rbind) function
+6. Filter the feature table object that contains column names and keep only the columns with names containing the std() and mean() pattern using the grep function. 
+7. Replace column names of merged table with the contents of the feature table that we previously filtered out. Column 1 and 2 are the activity and subject
+8. Merge the file using the merge function with the activity labels by the activity code. This way we can display the activity label rather than the code.
+9. Use the data.table package and use the following function to get the means for all columns by activity and subject:
+```meanTable[,lapply(.SD,mean),by=list(activity_label,subject)]```
+10. Write result to output file
+
